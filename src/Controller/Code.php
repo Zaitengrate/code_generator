@@ -43,6 +43,7 @@ class Code extends AbstractController
             $this->getDoctrine()->resetManager();
             return $this->forward('App\Controller\Code::generate', array(
                 'nb'  => $nb,
+                'export' => $export
             ));
         }
 
