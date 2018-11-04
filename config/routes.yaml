@@ -1,0 +1,13 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+app_code_generator:
+    path: /generate/{nb<\d*>?1}/{export<\w*>?}
+    controller: App\Controller\Code::generate
+    methods:    [POST]
+
+app_code_getter:
+    path: /{code}
+    controller: App\Controller\Code::getCode
+    methods:    [GET]
